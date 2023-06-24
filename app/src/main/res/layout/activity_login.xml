@@ -1,44 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_launcher_background"
-    tools:context=".Login">
+    tools:context=".Login"
+    tools:ignore="ExtraText">
+
 
     <ImageView
-        android:id="@+id/signuptitle"
+        android:id="@+id/logo"
         android:layout_width="316dp"
         android:layout_height="78dp"
-        android:src="@drawable/dieta"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/dieta"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
+        android:id="@id/title"
+        style="@style/Edit_Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@android:dimen/app_icon_size"
-        android:gravity="center"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="4dp"
         android:text="Sua Dieta"
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <EditText
 
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signuptitle"
+        android:layout_below="@id/title"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
@@ -51,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signuptitle"
+        app:layout_constraintTop_toBottomOf="@id/title"
 
     />
     <EditText
@@ -84,7 +94,7 @@
         android:background="#30ffffff"
         android:drawablePadding="20dp"
         android:hint="Senha"
-        android:inputType="textPassword"
+        android:inputType="numberPassword"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -93,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_entrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -104,6 +114,19 @@
         android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"/>
+        app:layout_constraintTop_toBottomOf="@id/password"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_entrar"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="28dp"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
