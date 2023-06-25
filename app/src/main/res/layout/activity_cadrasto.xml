@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_launcher_background"
-    tools:context=".Login"
-    tools:ignore="ExtraText">
+    tools:context=".Cadrasto">
 
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="316dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
-        android:src="@drawable/dieta"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+    <TextView
+        android:id="@+id/titlle_cadastrese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_cadastro"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <View
         android:id="@+id/containerComponents"
         style="@style/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/titlle_cadastrese"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
-    />
-    <EditText
-        android:id="@id/title"
-        style="@style/Edit_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="4dp"
-        android:text="Sua Dieta"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
+        />
 
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/VerdePalido"
+        android:drawablePadding="20dp"
+        android:hint="Seu Nome"
+        android:padding="20dp"
+        android:textColor="@color/cinzaClaro"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titlle_cadastrese"
+        />
 
     <EditText
         style="@style/Edit_Text"
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:background="@color/VerdePalido"
@@ -68,15 +66,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/containerComponents"
-         />
+        app:layout_constraintTop_toBottomOf="@id/edit_nome"
+        />
 
     <EditText
         style="@style/Edit_Text"
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/email"
+        android:layout_below="@id/password"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -101,37 +99,9 @@
         android:layout_marginEnd="100dp"
         android:background="@color/design_default_color_error"
         android:backgroundTint="@color/design_default_color_error"
-        android:text="Entrar"
+        android:text="Cadastrar "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/containerComponents"/>
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_entrar"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="28dp"
-        />
-
-    <TextView
-        android:id="@+id/text_tela_cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_cadastro"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
