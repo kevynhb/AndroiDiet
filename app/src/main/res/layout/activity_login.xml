@@ -52,7 +52,7 @@
 
     <EditText
         style="@style/Edit_Text"
-        android:id="@+id/email"
+        android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -72,10 +72,9 @@
 
     <EditText
         style="@style/Edit_Text"
-        android:id="@+id/password"
+        android:id="@+id/edit_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/email"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -87,7 +86,7 @@
         android:textColor="@color/cinzaClaro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
 
     <Button
@@ -105,6 +104,7 @@
         app:layout_constraintTop_toBottomOf="@id/containerComponents"/>
 
     <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -127,7 +127,7 @@
         android:layout_marginBottom="20dp"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
