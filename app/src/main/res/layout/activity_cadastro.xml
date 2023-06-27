@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Cadrasto">
+    tools:context=".Cadastro">
 
     <TextView
         android:id="@+id/titlle_cadastrese"
@@ -43,14 +43,13 @@
         android:hint="Seu Nome"
         android:padding="20dp"
         android:textColor="@color/cinzaClaro"
-        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titlle_cadastrese"
         />
 
     <EditText
         style="@style/Edit_Text"
-        android:id="@+id/email"
+        android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -62,7 +61,6 @@
         android:inputType="textEmailAddress"
         android:padding="20dp"
         android:textColor="@color/cinzaClaro"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +68,10 @@
         />
 
     <EditText
-        style="@style/Edit_Text"
-        android:id="@+id/password"
+        android:id="@+id/edit_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
+        android:layout_below="@id/edit_senha"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -84,14 +81,13 @@
         android:inputType="numberPassword"
         android:padding="20dp"
         android:textColor="@color/cinzaClaro"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
 
     <Button
-        android:id="@+id/button_entrar"
+        android:id="@+id/button_cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -99,7 +95,7 @@
         android:layout_marginEnd="100dp"
         android:background="@color/design_default_color_error"
         android:backgroundTint="@color/design_default_color_error"
-        android:text="Cadastrar "
+        android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/containerComponents"/>

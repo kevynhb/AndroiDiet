@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
         text_tela_cadastro.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(Login.this, Cadrasto.class);
+                Intent intent = new Intent(Login.this, Cadastro.class);
                 startActivity(intent);
             }
         });

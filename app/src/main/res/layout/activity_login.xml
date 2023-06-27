@@ -64,7 +64,6 @@
         android:inputType="textEmailAddress"
         android:padding="20dp"
         android:textColor="@color/cinzaClaro"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +85,6 @@
         android:inputType="numberPassword"
         android:padding="20dp"
         android:textColor="@color/cinzaClaro"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
